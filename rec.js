@@ -1,6 +1,26 @@
-let modeloTeclado = "Teclado Mecânico RGB"; // String
-let marca = "Redragon";                     // String
-let preco = 250.90;                         // Number
-let temEstoque = true;                      // Boolean
+let modeloTeclado = "Teclado Mecânico RGB";
+let marca = "Redragon";
+let preco = 250.90;
+let temEstoque = true;
 
-console.log(`Quero comprar o ${modeloTeclado} da marca ${marca} por R$ ${preco}. Tem em estoque? ${temEstoque}.`);
+
+let lojasDisponiveis = ["Kabum", "Pichau", "Terabyte", "Amazon"];
+
+
+console.log(`Quero comprar o ${modeloTeclado} da marca ${marca} por R$ ${preco}.`);
+
+
+console.log(`Lojas que vendem: ${lojasDisponiveis.join(", ")}.`);
+
+if (temEstoque) {
+    console.log(`Boa! Tá disponível na ${lojasDisponiveis[0]}. Pode comprar tranquilo.`); // Saída 3 (Dentro da condicional 1)
+} else {
+    console.log(`Poxa, esgotou em todas as lojas: ${lojasDisponiveis.join(", ")}. Vou ter que esperar.`);
+}
+
+let orcamento = 300.00; // Variável extra apenas para a segunda condicional funcionar
+if (preco <= orcamento) {
+    console.log(`O preço de R$ ${preco} cabe no seu orçamento de R$ ${orcamento}. Vale a pena!`);
+} else {
+    console.log(`O preço de R$ ${preco} tá acima do orçamento de R$ ${orcamento}. Melhor esperar uma promoção.`);
+}
